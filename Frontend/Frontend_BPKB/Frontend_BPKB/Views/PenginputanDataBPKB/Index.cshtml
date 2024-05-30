@@ -1,0 +1,59 @@
+﻿<style>
+    p {
+        font-weight: bold;
+    }
+
+</style>
+
+@using (Html.BeginForm("InputNewBPKB", "PenginputanDataBPKB", FormMethod.Post))
+{
+    <div class="card" style="width: 100%">
+        <div class="row">
+            <div class="col-6">
+                <p>Agreement Number</p>
+                <input class="form-control" type="text" placeholder="Input Agreement Number" name="agreementNumber" style="width: 100%" />
+
+                <p>Branch Id</p>
+                <input class="form-control" type="text" placeholder="Input Branch Id" name="branchId" style="width: 100%" />
+
+                <p>No. BPKB</p>
+                <input class="form-control" type="text" placeholder="Input No. BPKB" name="noBPKB" style="width: 100%" />
+
+                <p>Tanggal BPKB In</p>
+                <input class="form-control" type="date" name="tglBPKBIn" style="width: 100%" />
+
+                <p>Tanggal BPKB</p>
+                <input class="form-control" type="date" name="tglBPKB" style="width: 100%" />
+
+                <p>No. Faktur</p>
+                <input class="form-control" type="text" placeholder="Input No. Faktur" name="noFaktur" style="width: 100%" />
+            </div>
+            <div class="col-6">
+                <p>Tanggal Faktur</p>
+                <input class="form-control" type="date" name="tglFaktur" style="width: 100%" />
+
+                <p>Nomor Polisi</p>
+                <input class="form-control" type="text" placeholder="Input Nomor Polisi" name="noPolisi" style="width: 100%" />
+
+                <p>Lokasi Penyimpanan</p>
+                <select class="form-control" id="lokasiPenyimpanan" name="lokasiPenyimpanan" style="width: 100%">
+                    <option value="Folder A">Folder A</option>
+                    <option value="Folder B">Folder B</option>
+                    <option value="Folder C">Folder C</option>
+                    <option value="Folder D">Folder D</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; margin-top: 40px;">
+        <div class="row">
+            <div class="col-6">
+                <button class="btn" type="reset" style="width: 100%; background-color: darkorange"><p style="color: white">Cancel</p></button>
+            </div>
+            <div class="col-6">
+                <button class="btn" type="submit" style="width: 100%; background-color: darkorange"><p style="color: white">Save</p></button>
+            </div>
+        </div>
+    </div>
+}

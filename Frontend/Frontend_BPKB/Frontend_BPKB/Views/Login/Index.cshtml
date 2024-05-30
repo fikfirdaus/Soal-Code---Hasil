@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "/Views/Shared/Login.cshtml";
+}
+
+
+<div class="card">
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <p>Username</p>
+        <input type="text" class="form-control" name="inputUsername" />
+        <p>Password</p>
+        <input type="password" class="form-control" name="inputPassword" />
+
+        <br />
+        <button type="submit" class="btn btn-warning" style="width: 100%;">
+            Login
+        </button>
+    }
+</div>
